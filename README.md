@@ -38,4 +38,4 @@ To generate the documentation with the following command:
 
 ````bash
 $ npm run doc
-````````
+````
