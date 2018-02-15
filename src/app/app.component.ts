@@ -8,5 +8,5 @@ import {products} from './products';
 })
 export class AppComponent {
   title = 'app';
-  gridData: any[] = products;
+  public gridData: any[] = products;
 }
