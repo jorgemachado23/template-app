@@ -1,0 +1,15 @@
+$purple: #8160bd;
+$dark: #59236F;
+
+$theme-colors: (
+  "primary": $purple,
+  "dark": $dark
+);
+
+i.material-icons{
+  font-size: 1rem;
+}
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
