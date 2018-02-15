@@ -1,15 +1,90 @@
-$purple: #8160bd;
+$purple: #9276C6;
 $dark: #59236F;
+$danger: #a94442;
 
 $theme-colors: (
   "primary": $purple,
   "dark": $dark
 );
 
+body{
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  color: #444444;
+}
+
 i.material-icons{
   font-size: 1rem;
 }
 
+.k-grid tr.k-state-selected,
+.k-state-selected {
+  background-color: $purple;
+}
+
+.k-grid tr.k-alt:hover, .k-pager-wrap .k-state-selected:hover, .k-pager-wrap .k-state-selected:focus {
+  background-color: $purple;
+  box-shadow: none;
+}
+
+.k-grid-header th.k-header, .k-grid-header th.k-header a {
+  padding: .5em .6em .4em .6em;
+  font-weight: 400;
+  border-color: #ceced2;
+  font-size: 11px;
+}
+
+.k-grid tr {
+  background-color: rgb(251, 251, 251);
+}
+
+.k-grid .k-alt {
+  background-color: rgb(255, 255, 255);
+}
+
+.k-grid td {
+  padding: .4em .6em;
+  font-size: 11px;
+  line-height: 1.6em;
+  border-color: #dedee0;
+  cursor: pointer;
+}
+
+.k-grid tr:hover {
+  background-color: $purple;
+  color: white;
+}
+
+.k-window > .k-header {
+  background-color: $dark;
+  padding: 0.4em 1em;
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid $danger;
+}
+
+.form-control:focus, .has-error .form-control:focus,
+.has-success .form-control:focus, .has-warning .form-control:focus {
+  border-color: #42a948;
+}
+
+.k-pager-numbers .k-link, .k-pager-numbers .k-link:link {
+  color: $purple;
+}
+
+
+.k-pager-wrap .k-state-selected:hover, .k-pager-wrap .k-state-selected:focus {
+  background-color: $purple;
+  box-shadow: none;
+}
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/@progress/kendo-theme-default/scss/variables";
+@import "../node_modules/@progress/kendo-theme-default/scss/grid";
 
