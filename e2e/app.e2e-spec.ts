@@ -23,5 +23,4 @@ describe('template-app App', () => {
     const rows = element.all(by.css('tbody>tr'));
     expect(rows.count()).toBe(77);
   });
-
 });

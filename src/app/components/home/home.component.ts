@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {products} from './products';
+import {ProductService} from '../../services/product.service';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +8,15 @@ import {products} from './products';
 })
 export class HomeComponent implements OnInit {
 
-  public gridData: any[] = products;
-  constructor() { }
+  public gridData: any[] = [];
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
+    this.getProducts();
+  }
+
+  getProducts(): void {
+    this.productService.getProducts().subscribe(products => this.gridData = products);
   }
 
 }
