@@ -29,7 +29,7 @@ $theme-colors: (
 @import "../node_modules/@progress/kendo-theme-default/scss/maskedtextbox";
 @import "../node_modules/@progress/kendo-theme-default/scss/listbox";
 
-
+@import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
 body{
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 13px;

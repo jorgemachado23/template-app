@@ -14,6 +14,10 @@ import {DateInputsModule} from '@progress/kendo-angular-dateinputs';
 import {DropDownsModule} from '@progress/kendo-angular-dropdowns';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DialogModule} from '@progress/kendo-angular-dialog';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {InterceptorService} from './services/interceptor.service';
+import {LoaderService} from './services/loader.service';
+import {MatProgressBarModule} from '@angular/material';
 
 
 @NgModule({
@@ -21,9 +25,10 @@ import {DialogModule} from '@progress/kendo-angular-dialog';
     AppComponent,
     HomeComponent,
     SidebarComponent,
-    LoaderDirective
+    LoaderDirective,
   ],
   imports: [
+    MatProgressBarModule,
     FormsModule,
     BrowserModule,
     GridModule,
@@ -31,9 +36,18 @@ import {DialogModule} from '@progress/kendo-angular-dialog';
     DateInputsModule,
     DropDownsModule,
     BrowserAnimationsModule,
-    DialogModule
+    DialogModule,
+    HttpClientModule
   ],
-  providers: [ProductService],
+  providers: [
+    LoaderService,
+    ProductService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

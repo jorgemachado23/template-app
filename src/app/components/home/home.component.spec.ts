@@ -6,7 +6,9 @@ import {ProductService} from '../../services/product.service';
 import {DateInputsModule} from '@progress/kendo-angular-dateinputs';
 import {DropDownsModule} from '@progress/kendo-angular-dropdowns';
 import {FormsModule} from '@angular/forms';
-import {DialogModule} from '@progress/kendo-angular-dialog';
+import {DialogModule, DialogService} from '@progress/kendo-angular-dialog';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpTestingController} from '@angular/common/http/testing';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -15,8 +17,8 @@ describe('HomeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ HomeComponent ],
-      imports: [ FormsModule, GridModule, DateInputsModule, DropDownsModule, DialogModule],
-      providers: [ ProductService]
+      imports: [ FormsModule, GridModule, DateInputsModule, DropDownsModule, DialogModule, HttpClientModule],
+      providers: [ ProductService, DialogService, HttpTestingController]
     })
     .compileComponents();
   }));

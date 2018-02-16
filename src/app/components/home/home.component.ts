@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getProducts();
+    this.getValue();
   }
 
   getProducts(): void {
@@ -48,9 +49,11 @@ export class HomeComponent implements OnInit {
       } else {
         console.log('action', result);
       }
-
       this.result = JSON.stringify(result);
     });
   }
 
+  getValue(): void {
+    this.productService.getValue().subscribe(result => console.log(result));
+  }
 }

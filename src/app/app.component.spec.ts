@@ -2,6 +2,8 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import {RouterTestingModule} from '@angular/router/testing';
 import {SidebarComponent} from './components/sidebar/sidebar.component';
+import {MatProgressBarModule} from '@angular/material';
+import {LoaderService} from './services/loader.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,7 +13,11 @@ describe('AppComponent', () => {
         SidebarComponent
       ],
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        MatProgressBarModule
+      ],
+      providers: [
+        LoaderService
       ]
     }).compileComponents();
   }));
