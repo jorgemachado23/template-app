@@ -4,15 +4,21 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {GridModule} from '@progress/kendo-angular-grid';
+import {HomeComponent} from './components/home/home.component';
+import {AppRoutingModule} from '../app-routing.module';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
-    GridModule
+    GridModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
