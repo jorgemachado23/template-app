@@ -2,15 +2,19 @@ $purple: #9276C6;
 $dark: #59236F;
 $red: #a94442;
 $green: #42a948;
+$accent: $purple;
+$success: $green;
 
 $theme-colors: (
   "primary": $purple,
   "dark": $dark
 );
 
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/@progress/kendo-theme-default/scss/variables";
 @import "../node_modules/@progress/kendo-theme-default/scss/grid";
+@import "../node_modules/@progress/kendo-theme-default/scss/calendar";
 
 body{
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -33,11 +37,9 @@ i.material-icons{
     }
 
     &.k-state-selected{
-      background-color: $purple;
     }
 
     &.k-alt:hover{
-      background-color: $purple;
       box-shadow: none;
     }
   }
@@ -58,19 +60,13 @@ i.material-icons{
 
 }
 
-.k-state-selected {
-  background-color: $purple;
-}
 
 .k-pager-wrap{
 
   .k-state-selected{
 
     &:focus, &:hover {
-
-      background-color: $purple;
       box-shadow: none;
-
     }
   }
 }
@@ -109,15 +105,16 @@ i.material-icons{
 .form-control:focus, .has-error .form-control:focus,
 .has-success .form-control:focus, .has-warning .form-control:focus {
   border-color: $green;
+  box-shadow: none;
 }
 
-.k-pager-numbers{
-
-  .k-link, .k-left:link{
-    color: $purple;
-  }
-}
+.k-calendar { margin: 0 auto; }
 
 h1,h2,h3,h4{
   margin: 20px 0;
+}
+
+main{
+  height: calc(100vh - 3.5rem);
+  overflow: auto;
 }

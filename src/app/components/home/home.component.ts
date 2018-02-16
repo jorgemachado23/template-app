@@ -9,6 +9,8 @@ import {ProductService} from '../../services/product.service';
 export class HomeComponent implements OnInit {
 
   public gridData: any[] = [];
+  public test = '';
+  public id = 1;
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
