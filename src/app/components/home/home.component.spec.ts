@@ -3,6 +3,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 import {GridModule} from '@progress/kendo-angular-grid';
 import {ProductService} from '../../services/product.service';
+import {DateInputsModule} from '@progress/kendo-angular-dateinputs';
+import {DropDownsModule} from '@progress/kendo-angular-dropdowns';
+import {FormsModule} from '@angular/forms';
+import {DialogModule} from '@progress/kendo-angular-dialog';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -11,7 +15,7 @@ describe('HomeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ HomeComponent ],
-      imports: [ GridModule],
+      imports: [ FormsModule, GridModule, DateInputsModule, DropDownsModule, DialogModule],
       providers: [ ProductService]
     })
     .compileComponents();

@@ -20,7 +20,7 @@ describe('template-app App', () => {
 
   it('should contain a table grid with several rows', () => {
     page.navigateTo();
-    const rows = element.all(by.css('tbody>tr'));
+    const rows = element.all(by.css('kendo-grid tbody>tr'));
     expect(rows.count()).toBe(77);
   });
 });

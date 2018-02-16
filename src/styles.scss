@@ -15,6 +15,20 @@ $theme-colors: (
 @import "../node_modules/@progress/kendo-theme-default/scss/variables";
 @import "../node_modules/@progress/kendo-theme-default/scss/grid";
 @import "../node_modules/@progress/kendo-theme-default/scss/calendar";
+@import "../node_modules/@progress/kendo-theme-default/scss/autocomplete";
+@import "../node_modules/@progress/kendo-theme-default/scss/colorpicker";
+@import "../node_modules/@progress/kendo-theme-default/scss/combobox";
+@import "../node_modules/@progress/kendo-theme-default/scss/datetime";
+@import "../node_modules/@progress/kendo-theme-default/scss/dropdownlist";
+@import "../node_modules/@progress/kendo-theme-default/scss/editor";
+@import "../node_modules/@progress/kendo-theme-default/scss/input";
+@import "../node_modules/@progress/kendo-theme-default/scss/multiselect";
+@import "../node_modules/@progress/kendo-theme-default/scss/numerictextbox";
+@import "../node_modules/@progress/kendo-theme-default/scss/validator";
+@import "../node_modules/@progress/kendo-theme-default/scss/switch";
+@import "../node_modules/@progress/kendo-theme-default/scss/maskedtextbox";
+@import "../node_modules/@progress/kendo-theme-default/scss/listbox";
+
 
 body{
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -59,7 +73,6 @@ i.material-icons{
   }
 
 }
-
 
 .k-pager-wrap{
 
