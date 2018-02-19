@@ -13,4 +13,9 @@ describe('LoaderService', () => {
   it('should be created', inject([LoaderService], (service: LoaderService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('should verify loading value',  inject([LoaderService], (service: LoaderService) => {
+      service.setLoading(true);
+      service.loading$.subscribe(result => expect(result).toBeTruthy());
+  }));
 });

@@ -33,9 +33,9 @@ describe('ProductService', () => {
       let result = '';
       service.getValue().subscribe(response => result = response);
       const mock =  http.expectOne(`${environment.baseUrl}/api/value`);
-      mock.flush('blah');
+      mock.flush('test');
       http.verify();
       expect(service.getValue()).not.toBeNull();
-      expect(result).toEqual('blah');
+      expect(result).toEqual('test');
   }));
 });
