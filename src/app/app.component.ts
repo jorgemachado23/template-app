@@ -6,26 +6,15 @@ import {LoaderService} from './services/loader.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit, AfterContentInit, OnChanges {
+export class AppComponent implements OnInit{
 
   public title = 'app';
   public loading = false;
 
-  constructor(private changeDetector: ChangeDetectorRef, private loaderService: LoaderService, ) {}
+  constructor(private loaderService: LoaderService) {}
 
   ngOnInit() {
     this.isLoading();
-  }
-
-  ngAfterViewInit() {
-    this.changeDetector.detectChanges();
-
-  }
-
-  ngAfterContentInit() {}
-
-  ngOnChanges() {
-
   }
 
   isLoading() {
