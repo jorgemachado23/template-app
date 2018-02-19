@@ -8,6 +8,8 @@ import {DropDownsModule} from '@progress/kendo-angular-dropdowns';
 import {FormsModule} from '@angular/forms';
 import {DialogModule, DialogService} from '@progress/kendo-angular-dialog';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import {By} from '@angular/platform-browser';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -16,7 +18,7 @@ describe('HomeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ HomeComponent ],
-      imports: [ FormsModule, GridModule, DateInputsModule, DropDownsModule, DialogModule, HttpClientTestingModule],
+      imports: [ FormsModule, GridModule, DateInputsModule, DropDownsModule, DialogModule, HttpClientTestingModule, NoopAnimationsModule],
       providers: [ ProductService, DialogService, HttpTestingController]
     })
     .compileComponents();
@@ -44,4 +46,16 @@ describe('HomeComponent', () => {
     expect(app.gridData.length).toEqual(77);
     expect(compiled.querySelector('kendo-grid')).not.toBeNull();
   }));
+
+  it('Should render a dialog', async( () => {
+    const app = fixture.debugElement.componentInstance;
+    const compiled = fixture.debugElement.nativeElement;
+    fixture.detectChanges();
+    const btnModal = fixture.debugElement.query(By.css('#btn-modal'));
+    btnModal.triggerEventHandler('click', null);
+    fixture.detectChanges();
+    const kendoModal = fixture.debugElement.query(By.css('kendo-dialog'));
+    expect(kendoModal).toBeTruthy();
+  }));
+
 });
