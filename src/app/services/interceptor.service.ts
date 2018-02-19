@@ -3,6 +3,8 @@ import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from
 import {Observable} from 'rxjs/Observable';
 import {LoaderService} from './loader.service';
 import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/map';
+
 @Injectable()
 export class InterceptorService implements HttpInterceptor {
 
@@ -10,12 +12,17 @@ export class InterceptorService implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     this.loaderService.setLoading(true);
-    return next.handle(req).do((event: HttpEvent<any>) => {
+    return next.handle(req).map((event: HttpEvent<any>) => {
       if (event instanceof HttpResponse) {
-        this.loaderService.setLoading(false);
+        const result = event.clone({ body: this.parseServiceModel(event.body)});
+        return result;
       }
-    }, (error: any) => {
-      this.loaderService.setLoading(false);
+    }).do((event: HttpEvent<any>) => {
+        this.loaderService.setLoading(false);
     });
+  }
+
+  parseServiceModel(body: any): void {
+    return body.model;
   }
 }
