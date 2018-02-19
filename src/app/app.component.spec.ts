@@ -33,4 +33,13 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('app');
   }));
+
+  it('should verify that called isLoading method has been called', async ( () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    spyOn(app, 'isLoading');
+    expect(app.loading).toBeFalsy();
+    fixture.detectChanges();
+    expect(app.isLoading).toHaveBeenCalled();
+  }));
 });
