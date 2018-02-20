@@ -72,6 +72,7 @@
     "@progress/kendo-angular-l10n": "^1.0.6",
     "@progress/kendo-theme-default": "^2.47.8",
     "@progress/kendo-angular-dialog": "^3.1.2",
+    "@atrium-uw/atrium-interceptor": "^0.1.0",
     "popper.js": "^1.12.9",
     "ajv": "^6.1.1"
   }

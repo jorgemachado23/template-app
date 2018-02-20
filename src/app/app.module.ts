@@ -13,8 +13,8 @@ import {DropDownsModule} from '@progress/kendo-angular-dropdowns';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DialogModule} from '@progress/kendo-angular-dialog';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {InterceptorService} from './services/interceptor.service';
-import {LoaderService} from './services/loader.service';
+import {InterceptorService, LoaderService } from '@atrium-uw/atrium-interceptor';
+
 import {MatProgressBarModule} from '@angular/material';
 
 

@@ -1,5 +1,5 @@
-import {AfterContentInit, AfterViewInit, ChangeDetectorRef, Component, OnChanges, OnInit} from '@angular/core';
-import {LoaderService} from './services/loader.service';
+import {Component, OnInit} from '@angular/core';
+import {LoaderService} from '@atrium-uw/atrium-interceptor';
 
 @Component({
   selector: 'app-root',
