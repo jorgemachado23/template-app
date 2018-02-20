@@ -15,6 +15,6 @@ export class ProductService {
   }
 
   getValue(): Observable<any> {
-    return this.http.get(`${environment.baseUrl}/users`);
+    return this.http.get(`${environment.baseUrl}/api/value`);
   }
 }
