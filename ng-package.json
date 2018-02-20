@@ -8,7 +8,8 @@
       "@progress/kendo-upload": "kendo-upload",
       "@progress/kendo-angular-excel-export":"kendo-angular-excel-export",
       "@angular/forms": "forms",
-      "@angular/animations": "animations"
+      "@angular/animations": "animations",
+      "rxjs": "rxjs"
     }
   }
 }
