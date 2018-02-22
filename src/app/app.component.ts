@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {LoaderService} from '@atrium-uw/atrium-interceptor';
+import { ImpersonateComponent} from '@atrium-uw/impersonate-component';
+import {environment} from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,7 @@ import {LoaderService} from '@atrium-uw/atrium-interceptor';
 export class AppComponent implements OnInit {
 
   public title = 'app';
+  public userUrl = environment.userUrl;
   public loading = false;
 
   constructor(private loaderService: LoaderService) {}

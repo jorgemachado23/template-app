@@ -16,6 +16,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {InterceptorService, LoaderService } from '@atrium-uw/atrium-interceptor';
 
 import {MatProgressBarModule} from '@angular/material';
+import {ImpersonateComponent, ImpersonateModule} from '@atrium-uw/impersonate-component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import {MatProgressBarModule} from '@angular/material';
     DropDownsModule,
     BrowserAnimationsModule,
     DialogModule,
-    HttpClientModule
+    HttpClientModule,
+    ImpersonateModule
   ],
   providers: [
     LoaderService,

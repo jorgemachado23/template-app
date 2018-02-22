@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:55754'
+  baseUrl: 'http://localhost:55754',
+  userUrl : 'https://private-334ac8-test8488.apiary-mock.com/api/user'
 };
