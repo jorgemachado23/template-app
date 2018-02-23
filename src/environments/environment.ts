@@ -6,5 +6,5 @@
 export const environment = {
   production: false,
   baseUrl: 'http://localhost:55754',
-  userUrl : 'http://localhost:55750/api/user'
+  userUrl : 'http://localhost:55754/'
 };
