@@ -2,9 +2,18 @@
 
 ## Installation
 
+### Install the project libraries
+
+```bash 
+npm install
+```
+
+### Install angular cli global if you haven't already (this is optional)
+
 ````bash
-$ npm install @atrium/template-app --save
+npm install @angular/cli --save -g
 ````
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
