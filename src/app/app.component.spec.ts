@@ -4,6 +4,8 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {SidebarComponent} from './components/sidebar/sidebar.component';
 import {MatProgressBarModule} from '@angular/material';
 import {LoaderService} from '@atrium-uw/atrium-interceptor';
+import {ImpersonateModule} from '@atrium-uw/impersonate-component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -14,7 +16,9 @@ describe('AppComponent', () => {
       ],
       imports: [
         RouterTestingModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        ImpersonateModule,
+        HttpClientTestingModule
       ],
       providers: [
         LoaderService
