@@ -14,6 +14,8 @@ npm install
 npm install @angular/cli --save -g
 ````
 
+### Remember to change the project name in the package.json file
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
