@@ -54,6 +54,6 @@ npm run doc
 
 ````bash
 npm run version
-```
+````
 
 This will run using the npm [version command](https://docs.npmjs.com/cli/version)
