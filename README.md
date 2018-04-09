@@ -4,7 +4,7 @@
 
 ### Install the project libraries
 
-```bash 
+```bash
 npm install
 ```
 
@@ -15,7 +15,6 @@ npm install @angular/cli --save -g
 ````
 
 ### Remember to change the project name in the package.json file and .angular-cli.json
-
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
@@ -45,17 +44,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Generate documentation
 
-To generate the documentation with the following command: 
+To generate the documentation with the following command:
 
 ````bash
-$ npm run doc
+npm run doc
 ````
 
-## Publish Library 
+## Publish Library
 
-```bash
-$ npm run version 
+````bash
+npm run version
 ```
 
-This will run using the npm [version command](https://docs.npmjs.com/cli/version) 
-
+This will run using the npm [version command](https://docs.npmjs.com/cli/version)
