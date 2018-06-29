@@ -1,5 +1,5 @@
 {
-  "name": "template-app",
+  "name": "@atrium-uw/template-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,14 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "doc": "npm run docs:build",
+    "doc:serve": "compodoc -s",
+    "doc:buildandserve": "compodoc -p src/tsconfig.app.json -s",
+    "docs:build": "compodoc -p tsconfig.json",
+    "preversion": "npm run lint && npm run test",
+    "version": "npm run packagr",
+    "postversion": "git push && git push --tags && npm publish dist"
   },
   "private": true,
   "dependencies": {
@@ -63,6 +70,7 @@
     "@progress/kendo-angular-dialog": "^3.1.2",
     "@progress/kendo-data-query": "^1.0.0",
     "@progress/kendo-drawing": "^1.0.0",
-    "@progress/kendo-theme-default": "^2.47.8"
+    "@progress/kendo-theme-default": "^2.47.8",
+    "@compodoc/compodoc": "^1.0.6"
   }
 }

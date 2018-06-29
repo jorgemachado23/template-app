@@ -1,5 +1,18 @@
 # TemplateApp
 
+## Installation
+
+### Install the project libraries
+
+```bash
+npm install
+```
+
+### Install angular cli global if you haven't already (this is optional)
+
+````bash
+npm install @angular/cli --save -g
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
 ## Development server
@@ -21,6 +34,22 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Generate documentation
+
+To generate the documentation with the following command:
+
+````bash
+npm run doc
+````
+
+## Publish Library
+
+````bash
+npm run version
+````
+
+This will run using the npm [version command](https://docs.npmjs.com/cli/version)
 
 ## Further help
 
