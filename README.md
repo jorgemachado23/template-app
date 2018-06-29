@@ -15,6 +15,14 @@ npm install @angular/cli --save -g
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
+## Generate Library
+
+To generate the documentation with the following command:
+
+````bash
+ng generate library library-name  
+````
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -45,8 +53,18 @@ npm run doc
 
 ## Publish Library
 
+1. Commit the package.json file of the library to version that you want to publish
+2. Make sure that you don't have any pending commits in your working cope
+3. Run the following command
+
 ````bash
 npm run version
+````
+
+You can add comments using the following example
+
+````bash
+npm run version patch -m "deploy first version"
 ````
 
 This will run using the npm [version command](https://docs.npmjs.com/cli/version)
