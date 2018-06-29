@@ -10,8 +10,9 @@ npm install
 
 ### Install angular cli global if you haven't already (this is optional)
 
-````bash
+```bash
 npm install @angular/cli --save -g
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
@@ -19,9 +20,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 To generate the documentation with the following command:
 
-````bash
+```bash
 ng generate library library-name  
-````
+```
 
 ## Development server
 
@@ -47,25 +48,35 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To generate the documentation with the following command:
 
-````bash
+```bash
 npm run doc
-````
+```
 
 ## Publish Library
 
-1. Commit the package.json file of the library to version that you want to publish
-2. Make sure that you don't have any pending commits in your working cope
+1. Commit the package.json file of the library (inside the projects folder) to version that you want to publish.
+
+For instance if you want to publish the version `0.0.1` change the version property to `0.0.1`
+
+```json
+   {"version": "0.0.1" }
+```
+
+***Commit and push the changes***
+
+2. Make sure that you don't have any pending commits in your working copy
+
 3. Run the following command
 
-````bash
+```bash
 npm run version
-````
+```
 
 You can add comments using the following example
 
-````bash
+```bash
 npm run version patch -m "deploy first version"
-````
+```
 
 This will run using the npm [version command](https://docs.npmjs.com/cli/version)
 
