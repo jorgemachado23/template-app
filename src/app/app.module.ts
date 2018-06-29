@@ -17,6 +17,7 @@ import {InterceptorService, LoaderService } from '@atrium-uw/atrium-interceptor'
 
 import {MatProgressBarModule} from '@angular/material';
 import {ImpersonateComponent, ImpersonateModule} from '@atrium-uw/impersonate-component';
+import {environment} from '../environments/environment';
 
 
 @NgModule({
@@ -46,6 +47,10 @@ import {ImpersonateComponent, ImpersonateModule} from '@atrium-uw/impersonate-co
       useClass: InterceptorService,
       multi: true,
     },
+    {
+      provide: 'USER_URL',
+      useValue: environment.userUrl
+    }
   ],
   bootstrap: [AppComponent]
 })
