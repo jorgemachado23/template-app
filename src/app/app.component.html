@@ -1,11 +1,14 @@
 <header class="navbar navbar-dark bg-dark">
   <a class="navbar-brand atrium-logo" href="/">
     <i class="material-icons">menu</i>
-    <img src="assets/images/atriumLogo.svg"/>
+    <img src="assets/images/logo-navbar-white.png" />
   </a>
-  <div>
-    <lib-impersonate [appId]="113"></lib-impersonate>
-  </div>
+  <button class="btn btn-primary btn-margin" *ngIf="!auth.isAuthenticated()" (click)="auth.login()">
+    Log In
+  </button>
+  <button class="btn btn-primary btn-margin" *ngIf="auth.isAuthenticated()" (click)="auth.logout()">
+    Log Out
+  </button>
 </header>
 <div class="container-fluid">
   <div class="row">
@@ -13,11 +16,15 @@
       <app-sidebar></app-sidebar>
     </div>
     <main class="col-8 col-md-8 col-xl-11">
-      <div [hidden]="!loading">
-        <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
+      <div>
+          <button class="btn btn-primary btn-margin" *ngIf="!auth.isAuthenticated()" (click)="auth.login()">
+              Log In
+          </button>
       </div>
-      <router-outlet ></router-outlet>
+      <div [hidden]="!loading">
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      </div>
+      <router-outlet></router-outlet>
     </main>
   </div>
 </div>
-

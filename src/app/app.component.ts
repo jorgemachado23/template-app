@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {LoaderService} from '@atrium-uw/atrium-interceptor';
-import { ImpersonateComponent} from '@atrium-uw/impersonate-component';
 import {environment} from '../environments/environment';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +14,14 @@ export class AppComponent implements OnInit {
   public userUrl = environment.userUrl;
   public loading = false;
 
-  constructor(private loaderService: LoaderService) {}
+  constructor(private loaderService: LoaderService, public auth: AuthService) {}
 
   ngOnInit() {
+    this.auth.handleAuthentication();
     this.isLoading();
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+      this.auth.renewTokens();
+    }
   }
 
   isLoading() {

@@ -1,5 +1,5 @@
-$purple: #9276C6;
-$dark: #59236F;
+$purple: #5952ff;
+$dark: #372eff;
 $red: #e46050;
 $green: #42a948;
 $accent: $purple;
@@ -31,7 +31,7 @@ $theme-colors: (
 @import "../node_modules/@progress/kendo-theme-default/scss/maskedtextbox";
 @import "../node_modules/@progress/kendo-theme-default/scss/listbox";
 
-@import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '../node_modules/@angular/material/prebuilt-themes/indigo-pink.css';
 body{
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 13px;

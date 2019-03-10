@@ -16,15 +16,17 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {InterceptorService, LoaderService } from '@atrium-uw/atrium-interceptor';
 
 import {MatProgressBarModule} from '@angular/material';
-import {ImpersonateComponent, ImpersonateModule} from '@atrium-uw/impersonate-component';
 import {environment} from '../environments/environment';
+import { EditorModule } from '@tinymce/tinymce-angular';
+import { CallbackComponent } from './components/callback/callback.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SidebarComponent
+    SidebarComponent,
+    CallbackComponent
   ],
   imports: [
     MatProgressBarModule,
@@ -37,7 +39,7 @@ import {environment} from '../environments/environment';
     BrowserAnimationsModule,
     DialogModule,
     HttpClientModule,
-    ImpersonateModule
+    EditorModule
   ],
   providers: [
     LoaderService,
