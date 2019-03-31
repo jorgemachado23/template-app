@@ -48,8 +48,6 @@ describe('HomeComponent', () => {
   }));
 
   it('Should render a dialog', async( () => {
-    const app = fixture.debugElement.componentInstance;
-    const compiled = fixture.debugElement.nativeElement;
     fixture.detectChanges();
     const btnModal = fixture.debugElement.query(By.css('#btn-modal'));
     btnModal.triggerEventHandler('click', null);
